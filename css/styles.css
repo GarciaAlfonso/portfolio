@@ -1,0 +1,296 @@
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+/*fonts
+
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Nunito', sans-serif;
+
+*/
+
+body{
+    background-color: black;
+}
+div.fondo-principal {
+    background-image: url(../img/background03.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Barra*/
+
+nav.barra {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    nav.barra {
+        
+    }
+}
+
+
+div.iniciales a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    transition: ease-in .4s;
+    margin-left: 20px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+}
+@media (max-width: 768px) {
+    div.iniciales a{
+        /* font-size: 25px;
+        margin-left: 0; */
+        font-size: 25px;
+        
+    }
+}
+
+div.iniciales a:hover {
+    color: white;
+    padding: 0 20px;
+    border-bottom: 3px solid rgb(2, 89, 116);
+}
+
+div.enlaces a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+    transition: ease-in .2s;
+}
+@media (max-width: 425px) {
+    div.enlaces a {
+        text-align: center;
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 15px;
+    }
+}
+div.enlaces a:hover {
+    color: grey;
+
+}
+
+/*contenido Principal*/
+
+.contenido-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 230px;
+}
+
+.contenido-principal h1 {
+    font-size: 55px;
+    margin-bottom: 5px;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    .contenido-principal h1 {
+        font-size: 35px;
+        padding-top: 50px;
+    }
+}
+.contenido-principal p {
+    font-size: 20px;
+    margin-top: 0;
+}
+@media (max-width: 768px) {
+    .contenido-principal p{
+        font-size: 16px;
+    }
+}
+
+div.logos a{
+    color: white;
+    font-size: 25px;
+    margin-right: 30px;
+}
+@media (max-width: 768px) {
+    div.logos a {
+        font-size: 18px;
+    }
+}
+
+div.logos a:last-of-type {
+    margin-right: 0;
+}
+
+div a.linkedin {
+    transition: ease-out .2s;
+    
+}
+div a.linkedin:hover {
+    color: #0077b5;
+    padding: 10px;
+}
+
+div a.github {
+    transition: ease-out .2s;
+
+}
+div a.github:hover {
+    color: #5ab859;
+    padding: 10px;
+}
+
+div a.mail {
+    transition: ease-out .2s;
+}
+
+div a.mail:hover {
+    color: rgb(199, 63, 9);
+    padding: 10px;
+}
+
+/*Internas*/
+
+/*Proyectos*/
+
+
+div a.proyectos {
+    border-bottom: 3px solid rgb(2, 89, 116);
+    
+
+}
+
+h1.titulo-proyectos{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    margin: 100px 0;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+div.contenido-proyectos{
+    margin-top: 100px;
+    
+}
+
+p.nombre-pagina{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+div.miniatura {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    div.miniatura {
+        margin: 20px 0;
+    } 
+}
+
+p.logos i{
+    font-size: 30px;
+    margin: 0 15px 0 0;
+}
+p.logos i:last-of-type{
+    margin: 0;
+}
+
+i.react {
+    color: rgb(11, 194, 194);
+    
+}
+i.html {
+    color: darkorange;
+    
+}
+i.css {
+    color: #0077b5;
+}
+i.javaScript{
+    color: gold;
+}
+i.bootstrap{
+    color: blueviolet;
+}
+
+/*Miniaturas*/
+
+/* This container helps the thumbnail behave as if it were an unscaled IMG element */
+.thumbnail-container {
+  width: calc(1440px * 0.2);
+  height: calc(900px * 0.2);
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  background: #f9f9f9;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: ease-in-out .3s;
+}
+
+.thumbnail-container:hover {
+    border: 4px solid rgb(2, 89, 116);
+}
+
+
+
+/* Image Icon for the Background */
+
+
+/* This is a masking container for the zoomed iframe element */
+.thumbnail {
+  transform: scale(0.2);
+  transform-origin: 0 0;
+}
+
+/* This is our screen sizing */
+.thumbnail,
+.thumbnail iframe {
+  width: 1440px;
+  height: 900px;
+}
+
+/* This facilitates the fade-in transition instead of flicker. It also helps us maintain the illusion that this is an image, since some webpages will have a preloading animation or wait for some images to download */
+.thumbnail iframe {
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+/* This pseudo element masks the iframe, so that mouse wheel scrolling and clicking do not affect the simulated "screenshot" */
+.thumbnail:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
